@@ -32,8 +32,8 @@ for t = 1 : 1000
     x_possible = cell(1,5);
     
     for i = 1 : 5
-        x_possible{1,i} = x_pred(:,t) + K*(z(:,t) - e_possible(i).*5 - y1_pred);
-        p_temp(i,:) = exp(- (z(:,t) - e_possible(i).*5 - y1_pred).^2./S./2)./sqrt(2.*pi .* S);
+        x_possible{1,i} = x_pred(:,t) + K*(z(:,t) - e_possible(i).*lambda - y1_pred);
+        p_temp(i,:) = exp(- (z(:,t) - e_possible(i).*lamdba - y1_pred).^2./S./2)./sqrt(2.*pi .* S);
     end
     
    
